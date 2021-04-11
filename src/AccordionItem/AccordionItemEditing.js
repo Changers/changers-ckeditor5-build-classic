@@ -1,4 +1,3 @@
-
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import { toWidget, toWidgetEditable } from '@ckeditor/ckeditor5-widget/src/utils';
 import Widget from '@ckeditor/ckeditor5-widget/src/widget';
@@ -50,7 +49,6 @@ export default class AccordionItemEditing extends Plugin {
         this._defineConverters();
 
         this.editor.commands.add( 'insertAccordionItem', new InsertAccordionItemCommand( this.editor ) );
-
     }
 
     _defineSchema() {
@@ -112,7 +110,7 @@ export default class AccordionItemEditing extends Plugin {
         conversion.for( 'editingDowncast' ).elementToElement( {
             model: 'accordionItem',
             view: ( modelElement, { writer: viewWriter } ) => {
-                const section = viewWriter.createContainerElement( 'audio', { class: 'accordion-item' } );
+                const section = viewWriter.createContainerElement( 'details', { class: 'accordion-item' } );
 
                 return toWidget( section, viewWriter, { label: 'accordion item widget' } );
             }
@@ -122,7 +120,7 @@ export default class AccordionItemEditing extends Plugin {
         conversion.for( 'upcast' ).elementToElement( {
             model: 'accordionItemTitle',
             view: {
-                name: 'audio',
+                name: 'summary',
                 classes: 'accordion-item-title'
             }
         } );
