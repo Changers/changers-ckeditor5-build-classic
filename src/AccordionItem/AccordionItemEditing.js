@@ -50,6 +50,7 @@ export default class AccordionItemEditing extends Plugin {
         this._defineConverters();
 
         this.editor.commands.add( 'insertAccordionItem', new InsertAccordionItemCommand( this.editor ) );
+
     }
 
     _defineSchema() {
@@ -111,7 +112,7 @@ export default class AccordionItemEditing extends Plugin {
         conversion.for( 'editingDowncast' ).elementToElement( {
             model: 'accordionItem',
             view: ( modelElement, { writer: viewWriter } ) => {
-                const section = viewWriter.createContainerElement( 'details', { class: 'accordion-item' } );
+                const section = viewWriter.createContainerElement( 'audio', { class: 'accordion-item' } );
 
                 return toWidget( section, viewWriter, { label: 'accordion item widget' } );
             }
@@ -121,7 +122,7 @@ export default class AccordionItemEditing extends Plugin {
         conversion.for( 'upcast' ).elementToElement( {
             model: 'accordionItemTitle',
             view: {
-                name: 'summary',
+                name: 'audio',
                 classes: 'accordion-item-title'
             }
         } );
