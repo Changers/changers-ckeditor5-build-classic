@@ -1,0 +1,12 @@
+.ck-content .audio {
+  display: table;
+  clear: both;
+  text-align: center;
+  margin: 1em auto;
+}
+.ck-content .audio audio {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  min-width: 50px;
+}
