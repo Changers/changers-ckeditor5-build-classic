@@ -14,7 +14,7 @@ import Clipboard from "@ckeditor/ckeditor5-clipboard/src/clipboard";
 import UpcastWriter from "@ckeditor/ckeditor5-engine/src/view/upcastwriter";
 import env from "@ckeditor/ckeditor5-utils/src/env";
 
-const DEFAULT_AUDIO_EXTENSIONS = ['mp3', 'ogg', 'm4a', 'wav'];
+const DEFAULT_AUDIO_EXTENSIONS = ['mp3', 'ogg', 'm4a', 'mp4','wav'];
 
 export default class AudioUploadEditing extends Plugin {
     static get requires() {
