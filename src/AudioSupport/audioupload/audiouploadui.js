@@ -29,9 +29,7 @@ export default class Audiouploadui extends Plugin {
 
             view.on('done', (evt, files) => {
                 const audiosToUpload = Array.from(files);
-                console.log(audiosToUpload, "audios to upload")
                 if (audiosToUpload.length) {
-                    console.log(audiosToUpload, "audios to upload 2")
                     editor.execute('uploadAudio', { files: audiosToUpload });
                 }
             });

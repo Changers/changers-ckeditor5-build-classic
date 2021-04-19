@@ -82,7 +82,6 @@ export function getViewAudioFromWidget( figureView ) {
 }
 
 export function insertAudio( writer, model, attributes = {} ) {
-	console.log("got to the insert audiuo")
 	attributes.controls = 'controls';
 	const audioElement = writer.createElement( 'audio', attributes );
 

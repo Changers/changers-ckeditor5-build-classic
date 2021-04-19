@@ -25,7 +25,6 @@ export function isAudio( modelElement ) {
 }
 
 export function insertAudio( writer, model, attributes = {} ) {
-	console.log("got to the insert audiuo")
 	attributes.controls = 'controls';
 	const audioElement = writer.createElement( 'audio', attributes );
 
