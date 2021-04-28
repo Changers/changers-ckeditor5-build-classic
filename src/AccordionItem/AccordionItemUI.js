@@ -10,7 +10,7 @@ export default class AccodrionItemUI extends Plugin {
 
         // This adds the space functionality
         editor.keystrokes.set( 'Space', ( key, stop ) => {
-            editor.execute( 'input', { text: '\u00a0' } );
+            editor.execute( 'input', { text: ' ' } );
             stop();
         } );
 
