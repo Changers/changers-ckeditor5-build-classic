@@ -10,8 +10,6 @@
 }
 
 .accordion-item-title {
-	color: #006e9b;
-    font-weight: bold;
 	padding: 10px;
 }
 
@@ -25,8 +23,7 @@ details > summary {
 
 .accordion-item-description {
     padding: 15px 20px;
-    color: #047d8c;
-    border-left: 3px solid #7ac943 !important;
+    border-left: 3px solid #3c3c3c !important;
 }
 
 summary::after {
@@ -41,7 +38,3 @@ details[open] summary:after {
     float: right;
 }
 
-details[open] summary {
-    color: #7ac943;
-    font-weight: bold;
-}

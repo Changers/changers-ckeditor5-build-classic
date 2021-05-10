@@ -38,6 +38,8 @@ Audio,
 AudioUpload
 } from "./AudioSupport";
 
+import "./custom.css";
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
